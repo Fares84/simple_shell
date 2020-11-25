@@ -1,0 +1,84 @@
+.TH SIMPLE_SHELL "NOVEMBER 18 2020" "simple_shell man page"
+.SH NAME
+.B hsh
+
+- A simple UNIX command interprter
+
+.SH SYNOPSIS
+man [command] [arguments]
+
+EXAMPLE:
+
+man ls -l
+
+.SH DESCRIPTION
+This program is a simple shell. It contains basic features and functions that interprets commands entered by the user.
+
+.SH OVERVIEW
+User will put a command.
+User input will be tokenized (divided into small tokens), these tokens are seperated by delimeters.
+The first token which is token[0] will be considered as the command.
+The simple_shell will search for the PATH of this command (token[0]).
+If the $PATH is found the simple_shell will run that command.
+
+.SH RETURN VALUE
+The simple_shell will return the value demanded from the program if the program managed to execute
+without problems, or the simple_shell will return an error depending on the type of error.
+
+.SH COMPILATION
+files can be compiled using "gcc -g *.c -o hsh"
+
+.B LIST OF FILES TO BE compiled:
+
+get_env.c
+
+shell.c
+
+
+
+.SH SYNTAX
+$ <command>
+
+or
+
+$ <commands> <filename>
+
+or
+
+$ <command> "text"
+
+EXAMPLE 1:
+
+$ ls
+
+EXAMPLE 2:
+
+$ cd /home/simple_shell
+
+EXAMPLE 3:
+
+$ echo "hello holberton"
+
+.SH COMMANDS EXAMPLES
+ls : list all files in the current directory
+
+cd : change the current working directory
+
+exit : exit the shell program
+
+pwd : print the path of the current working directory
+
+printenv: prints out the name and values of the variables in the environement
+
+help : displays information about shell built-in commands
+
+.SH HANDLING SHORTCUTS
+ Ctrl+D : terminates the simple_shell
+
+ Ctrl+C : prints ^C and gets the user back to a new line
+
+.SH BUGS
+ Giving ls command an empty path is not handled.
+
+.SH AUTHORS
+Tsetseg, Fares
