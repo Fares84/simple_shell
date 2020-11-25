@@ -8,9 +8,9 @@
  */
 int main(int ac, char **av)
 {
-	(void)ac;
 	list_t member;
 	int get_line_len;
+	(void)ac;
 
 	member.shell_name = av[0];
 	member.env_ll = generateLinkedList(environ);
