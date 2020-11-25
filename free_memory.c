@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * freeMembers - frees member list_t members
+ * free_members - frees member list_t members
  * @member: input member
  */
 void free_members(list_t *member)
@@ -15,7 +15,7 @@ void free_members(list_t *member)
 }
 
 /**
- * freeArgsAndBuffer - frees args and buffer
+ * free_args_line - frees args and buffer
  * @member: input member
  */
 void free_args_line(list_t *member)
@@ -25,7 +25,7 @@ void free_args_line(list_t *member)
 }
 
 /**
- * freeList - frees a linked list
+ * free_list - frees a linked list
  * @head: double pointer to head of list
  */
 void free_list(linked_l *head)
@@ -47,7 +47,7 @@ void free_list(linked_l *head)
 }
 
 /**
- * freeArgs - helper func that frees double pointer arg
+ * free_args - helper func that frees double pointer arg
  * @args: array of char pointers
  */
 void free_args(char **args)
