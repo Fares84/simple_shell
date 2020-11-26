@@ -17,7 +17,7 @@ int tokenizer(list_t *member)
 	{
 		member->args = NULL;
 		free(member->line);
-		free_members(member);
+/*		free_members(member); */
 		return (-1);
 	}
 	member->args = malloc((n_words_line + 1) * sizeof(char *));
