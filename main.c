@@ -8,8 +8,8 @@
  */
 int main(int ac, char **av)
 {
-	list_t member;
 	int get_line_len;
+	list_t member;
 	(void)ac;
 
 	member.shell_name = av[0];
