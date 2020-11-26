@@ -17,6 +17,7 @@ int check_path(list_t *member)
 	{
 		member->path = member->args[0];
 		free(copy);
+		exit(errno);
 		return (-1);
 	}
 	token_path = strtok(copy, delim); /* = /usr/local/sbin */

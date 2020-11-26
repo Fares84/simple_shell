@@ -21,7 +21,7 @@ int f_exit(list_t *member)
 		exit_status = _atoi(member->args[1]);
 		if (exit_status == -1)
 		{
-			errno = EILLEGAL; /* require num */
+			errno = EBADRQC; /* require num */
 			errorHandler(member);
 			return (0);
 		}

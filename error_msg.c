@@ -39,7 +39,7 @@ char *getErrorMessage(void)
 		str = ": not found";
 		break;
 	case EILLEGAL:
-		str = ": numeric argument required";
+		str = ": Illegal number";
 		break;
 	default:
 		str = ": error errno";
