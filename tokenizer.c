@@ -10,8 +10,10 @@ int tokenizer(list_t *member)
 {
 	unsigned int n_words_line, i = 0;
 	char *token, *line_copy;
+	char delim[]=" \t\r\n\v\f";
 
-	n_words_line = count_words(member->line) + 1; /* +1 for l l l */
+	n_words_line = count_words(member->line); /* +1 for l l l */
+	printf("n of words ----> %d\n", n_words_line);
 	if (n_words_line == 0)
 	{
 		member->args = NULL;
@@ -21,12 +23,12 @@ int tokenizer(list_t *member)
 	}
 	member->args = malloc((n_words_line + 1) * sizeof(char *));
 	line_copy = _strdup(member->line);
-	token = strtok(line_copy, " ");
+	token = strtok(line_copy, delim);
 
 	while (token)
 	{
 		member->args[i] = _strdup(token);
-		token = strtok(NULL, " ");
+		token = strtok(NULL, delim);
 		i++;
 	}
 	member->args[i] = NULL;
