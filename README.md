@@ -59,10 +59,9 @@ Shellock_holmes$ pwd
 ```c
 Shellock_holmes$ /bin/ls
 AUTHORS      free_memory.c   manual	  string_funcs1.c
-builtins.c   get_builtins.c  path.c	      string_funcs2.c
-environ.c    holberton.h     prompt.c	            tokenizer.c
-error_msg.c  hsh
-execute.c    main.c			       README.md
+builtins.c   get_builtins.c  path.c	  string_funcs2.c
+environ.c    holberton.h     prompt.c	  tokenizer.c
+error_msg.c  hsh	     execute.c    main.c README.md
 ```
 ```c
 Shellock_holmes$ exit
@@ -75,4 +74,5 @@ vagrant@vagrant-ubuntu-trusty-64:~/simple_shell$ echo "qwerty" | ./hsh
 
 ## Authors
 Tsetseg Yondongombo
+
 Fares SASSI
