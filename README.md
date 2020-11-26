@@ -63,7 +63,8 @@ FILES
  execute.c	   File that contains the execution fucntion
  environ.c	   File that contains the environment fucntion
  tokenizer.c	   File that contains a function to tokenize commands
- string_funcs.c    File containing helper functions like "_strdup and _strlen.."
+ string_funcs1.c   File containing helper functions like "_strdup and _strlen.."
+ string_funcs2.c   File containing helper functions like "_strdup and _strlen.."
  free_memory.c     File containing function that frees memory
 
 We tried to recreate in this project shell() function and fill in with
