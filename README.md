@@ -5,7 +5,7 @@
 # Simple Shell Project
 
 
-##Project description:
+## Project description:
 
 This repository contains C program for **Simple Shell** written as part of the **Low-level programming and Algorithm** project at **Holberton School**. The program is the implementation of a command-line interpreter (Shell) that provides user interface for operating systems.
 
