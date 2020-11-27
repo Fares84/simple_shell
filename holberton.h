@@ -91,7 +91,6 @@ char *_strdup(char *str);
 char *_strcpy(char *dest, char *src);
 char *_strchr(char *s, char c);
 linked_l *addNodeEnd(linked_l **head, char *str);
-/*size_t list_len(linked_l *h);*/
 linked_l *generateLinkedList(char **array);
 void free_members(list_t *member);
 void free_args_line(list_t *member);
