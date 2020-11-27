@@ -1,84 +1,53 @@
-.TH SIMPLE_SHELL "NOVEMBER 18 2020" "simple_shell man page"
+.TH man 1 "NOVEMBER 18 2020" "1.0" "simple_shell man page"
 .SH NAME
-.B hsh
+.B simple_shell
 
-- A simple UNIX command interprter
-
+- An implementation of simple UNIX command interpreter
 .SH SYNOPSIS
 man [command] [arguments]
-
-EXAMPLE:
-
-man ls -l
-
+.br
 .SH DESCRIPTION
-This program is a simple shell. It contains basic features and functions that interprets commands entered by the user.
+This program is a simple shell with limited functionalities. It contains basic features and functions that interprets commands entered by the user.
+.br
+A command line interpreter reads commands from the standard input,
+interprets them, and then executes the command.
+.br
+.br
+The program is compiled as followed:
+.br
+.B gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+.br
+enter
+.B ./hsh
+to execute simple_shell
+.SH USAGE
+Shellock_holmes$ command
+.br
+$ command [-flag] [file / directory]
+.br
+enter
+.B Ctrl-D or exit
+to exit shell (Ctrol-C not supported)
+.br
+The command could be any executable file from the PATH environment variable,
+with or without the full path provided with the input command.
 
-.SH OVERVIEW
-User will put a command.
-User input will be tokenized (divided into small tokens), these tokens are seperated by delimeters.
-The first token which is token[0] will be considered as the command.
-The simple_shell will search for the PATH of this command (token[0]).
-If the $PATH is found the simple_shell will run that command.
-
-.SH RETURN VALUE
-The simple_shell will return the value demanded from the program if the program managed to execute
-without problems, or the simple_shell will return an error depending on the type of error.
-
-.SH COMPILATION
-files can be compiled using "gcc -g *.c -o hsh"
-
-.B LIST OF FILES TO BE compiled:
-
-get_env.c
-
-shell.c
-
-
-
-.SH SYNTAX
-$ <command>
-
-or
-
-$ <commands> <filename>
-
-or
-
-$ <command> "text"
-
-EXAMPLE 1:
-
-$ ls
-
-EXAMPLE 2:
-
-$ cd /home/simple_shell
-
-EXAMPLE 3:
-
-$ echo "hello holberton"
-
-.SH COMMANDS EXAMPLES
-ls : list all files in the current directory
-
-cd : change the current working directory
-
-exit : exit the shell program
-
-pwd : print the path of the current working directory
-
-printenv: prints out the name and values of the variables in the environement
-
-help : displays information about shell built-in commands
-
-.SH HANDLING SHORTCUTS
- Ctrl+D : terminates the simple_shell
-
- Ctrl+C : prints ^C and gets the user back to a new line
+.SYNOPSIS
+The simple_shell will identify command names and attemts to find an executable file with that name and run it. The simple_shell looks for the executable file with that exact name in the list of directories kept in the PATH envirnnment variable. 
+.br
+if the command is built-in, it is executed directly by the simple_shell and are not searched for and run as external programs.
+.br
+If the simple_shell can't find the command name, or if it can't execute the command, it should display the corresponding error message.
+.br
+.br
+.SH EXAMPLES
+.sp
+Shellock_Holmes ls
+.sp
+Shellock_Holmes$ exit 98
 
 .SH BUGS
- Giving ls command an empty path is not handled.
+ Run with Valgrind with options to display errors or memory leak if any.
 
 .SH AUTHORS
-Tsetseg, Fares
+Fares, Battsetseg
